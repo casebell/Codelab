@@ -1,9 +1,9 @@
 About = React.createClass({
   render() {
     return (
-      <div className="page">
+      <article className="page">
         <h3>About</h3>
-      </div>
+      </article>
     );
   }
 });

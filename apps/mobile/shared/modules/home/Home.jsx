@@ -1,9 +1,9 @@
 Home = React.createClass({
   render() {
     return (
-      <div className="page">
+      <article className="page">
         <h3><i className="fa fa-home"></i> Home</h3>
-      </div>
+      </article>
     );
   }
 });
