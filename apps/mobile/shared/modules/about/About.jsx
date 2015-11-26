@@ -1,9 +1,14 @@
 About = React.createClass({
   render() {
     return (
-      <article className="page">
-        <h3>About</h3>
-      </article>
+      <main id="content">
+        <Header />
+
+        <article className="page">
+
+          <h3>About</h3>
+        </article>
+      </main>
     );
   }
 });
