@@ -27,4 +27,5 @@ react
 reactrouter:react-router
 reactrouter:react-router-ssr
 
-
+less
+fortawesome:fontawesome
