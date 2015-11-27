@@ -7,8 +7,7 @@ Layout = React.createClass({
 
     return (
       <div id="container">
-        <RouteTransition name="slide"
-                         path={path}
+        <RouteTransition location={this.props.location}
                          component="main"
                          className="route-views">
           <div key={path} className="route-view">{this.props.children}</div>
