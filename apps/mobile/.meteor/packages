@@ -29,4 +29,8 @@ reactrouter:react-router-ssr
 
 less
 fortawesome:fontawesome
-shinejs:bootstrap-less
+shinejs:shine-theme-mobile
+
+shinejs:i18n
+shinejs:react-overlays
+
