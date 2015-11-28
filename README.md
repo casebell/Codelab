@@ -206,3 +206,37 @@ Overlay 팝업에서 지원되는 화면에는 alert, confirm, page, notify 가 
 
 자체 개발한 `i18n` 패키지가 있어, 이를 이용하면 쉽게 다국어 버전을 만들 수 있습니다.
 
+## 6. SHINE Architecture
+
+### Module
+
+Meteor는 파일 구조를 개발자의 자율로 다양하게 설계할 수 있도록 자유도를 높여 주고 있습니다.  
+Meteor Document를 보면 파일 구조에 대한 [몇 가지 패턴](http://docs.meteor.com/#/full/structuringyourapp)을 보여줍니다.
+
+`SHINE`은 여기서 첫 번째 방식을 채택하였습니다.  
+앱의 기능 단위로 독립된 디렉토리에 모든 연관 소스를 두는 방식입니다.  
+이를 `module`이라 부릅니다.
+
+`SHINE` 소스의 `/shared/modules` 디렉토리에 `module`이 자리합니다. 
+각 `module`의 구조는 다음과 같습니다. (예시로 `post` 모듈의 경우)
+
+    
+    /client
+        Posts.jsx
+        PostsContainer.jsx
+        PostView.jsx
+        PostContainer.jsx
+        PostForm.jsx
+        PostNewContainer.jsx
+        PostEditContainer.jsx
+        
+    /lib
+        post_model.js
+        post_validator.js
+        
+    /server
+        post_publish.js
+    
+
+
+

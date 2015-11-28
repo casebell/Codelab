@@ -1,5 +1,5 @@
 
-Header = React.createClass({
+App.Header = React.createClass({
   getDefaultProps() {
     return {
       title: 'Page-Title'
@@ -11,7 +11,10 @@ Header = React.createClass({
       <header>
         <div className="logo">{this.props.title}</div>
         <div className="header-left">
-          <NavButton />
+          {RouteTransition.canGoBack() ? <App.BackButton />: <App.NavButton />}
+        </div>
+        <div className="header-right">
+          {RouteTransition.canGoBack() ? <App.HomeButton />: null }
         </div>
       </header>
     )

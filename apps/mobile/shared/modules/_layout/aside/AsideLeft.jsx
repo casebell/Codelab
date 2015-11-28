@@ -1,5 +1,5 @@
 
-AsideLeft = React.createClass({
+App.AsideLeft = React.createClass({
   statics: {
     toggle() {
       $('#container').toggleClass('aside-left-on');
@@ -12,11 +12,10 @@ AsideLeft = React.createClass({
       //document.getElementById('container').className = '';
     }
   },
-
   render() {
     return (
       <aside className="left">
-        <AsideNavs />
+        <App.AsideNavs />
       </aside>
     )
   }

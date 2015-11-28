@@ -1,7 +1,8 @@
-NavButton = React.createClass({
+
+App.NavButton = React.createClass({
 
   onMenu() {
-    AsideLeft.toggle();
+    App.AsideLeft.toggle();
   },
 
   render() {

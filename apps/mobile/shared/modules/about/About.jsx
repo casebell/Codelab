@@ -45,7 +45,7 @@ About = React.createClass({
   render() {
     return (
       <main id="content">
-        <Header />
+        <App.Header />
 
         <article className="page">
 

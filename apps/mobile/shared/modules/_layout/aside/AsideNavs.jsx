@@ -1,12 +1,13 @@
 
 const navs = [
   { path: '/home', name: 'Home' },
+  { path: '/posts', name: 'Posts' },
   { path: '/about', name: 'About' },
 ];
 
 const { Link } = ReactRouter;
 
-AsideNavs = React.createClass({
+App.AsideNavs = React.createClass({
   navList() {
     return navs.map((item) => {
       return (

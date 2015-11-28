@@ -2,7 +2,7 @@ Home = React.createClass({
   render() {
     return (
       <main id="content">
-        <Header />
+        <App.Header />
 
         <article className="page">
           <h3><i className="fa fa-home"></i> Home</h3>

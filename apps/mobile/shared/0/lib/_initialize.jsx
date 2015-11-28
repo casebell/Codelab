@@ -1,6 +1,6 @@
 
 // Global namespaces
-if (typeof(App) === 'undefined') App = {};
+if (typeof App === 'undefined') App = {};
 
 Meteor.startup(function () {
 

@@ -5,10 +5,12 @@ if (Meteor.isClient) {
   const createHistory = ReactRouter.history.createHistory;
 
   const router = (
-    <Router history={createHistory()}>
-      <Route path="/" component={Layout} >
+    <Router history={createHistory()} onUpdate={App.AsideLeft.hide} >
+      <Route path="/" component={App.Layout} >
         <Route path="home" component={Home} />
         <Route path="about" component={About} />
+
+        <Route path="posts" component={Posts.ListContainer} />
 
         <IndexRoute component={Home}/>
       </Route>
