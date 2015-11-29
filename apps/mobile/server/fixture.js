@@ -22,7 +22,7 @@ insertInitData = function() {
           _id: userId,
           name: '운영자',
         },
-        createdAt: moment().add(100 - i, 'days').toDate(),
+        createdAt: moment().add(i - 100, 'days').toDate(),
       });
     }
 

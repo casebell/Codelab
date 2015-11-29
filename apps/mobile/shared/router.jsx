@@ -20,6 +20,8 @@ if (Meteor.isClient) {
 
         <Route path="posts" component={Post.ListContainer} />
         <Route path="post/:_id" component={Post.ViewContainer} />
+        <Route path="post/edit/:id" component={Post.EditContainer} />
+        <Route path="post/new" component={Post.NewContainer} />
 
         <IndexRoute component={Home}/>
       </Route>

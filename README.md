@@ -279,3 +279,14 @@ Facebook, Twitter, Google, GitHub 등의 계정에 대하여 OAuth 기능을 기
 
 `SHINE`은 이 `accounts-ui` 패키지를 React 컴포넌트로 구현한 `shinejs:react-accounts-ui`를 구현하였습니다.
 
+### Meteor.methods와 폼 프로세스
+
+데이터베이스에 새로운 도큐먼트를 삽입하거나, 수정, 삭제하는 경우에는 Meteor.methods를 사용합니다.  
+
+폼을 통해서 입력을 받고, 이를 서버로 전달하기 전에 입력 데이터의 유효성 검사를 수행합니다.
+
+그 다음, `Meteor.call(name, options)` 함수를 통해서 `Meteor.methods`를 호출합니다.
+
+호출된 `Meteor.methods`의 함수는 입력 데이터의 유효성 검사, 사용자 권한 검사를 수행한 후,
+데이터를 변경하고 그 결과를 리턴합니다.
+
