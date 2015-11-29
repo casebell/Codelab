@@ -25,7 +25,20 @@ insertInitData = function() {
         createdAt: moment().add(i - 100, 'days').toDate(),
       });
     }
+/*
+    System.collection.insert({
+      _id: 'cloudinary',
 
+      cloudName: 'your cloud-name',
+      apiKey: 'your api key',
+      presets: {
+        accounts: 'ps_accounts',
+        posts: 'ps_posts'
+      },
+
+      apiSecret: 'your api secret'
+    });
+*/
   }
 };
 

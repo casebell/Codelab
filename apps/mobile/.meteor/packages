@@ -28,13 +28,14 @@ less
 fortawesome:fontawesome
 shinejs:shine-theme-mobile
 
+momentjs:moment
 shinejs:i18n
 shinejs:react-overlays
 shinejs:react-spin
+shinejs:react-cloudinary
 
-momentjs:moment
+check
 
 shinejs:react-accounts-ui
 accounts-password
 
-check

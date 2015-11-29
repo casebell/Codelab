@@ -1,6 +1,12 @@
 
 const { Router, Route, IndexRoute } = ReactRouter;
 
+const requireAuth = function(nextState, replaceState) {
+  if (! Meteor.loggingIn() && ! Meteor.user()) {
+    replaceState({ nextPathname: nextState.location.pathname }, '/sign-in');
+  }
+};
+
 if (Meteor.isClient) {
   const createHistory = ReactRouter.history.createHistory;
 
@@ -14,6 +20,13 @@ if (Meteor.isClient) {
                component={Accounts.ui.ForgotPasswordContainer} />
         <Route path="reset-password/:token"
                component={Accounts.ui.ResetPasswordContainer} />
+
+        <Route path="profile"
+               component={Profile.ViewContainer}
+               onEnter={requireAuth} />
+        <Route path="profile/edit/:name"
+               component={Profile.EditContainer}
+               onEnter={requireAuth} />
 
         <Route path="home" component={Home} />
         <Route path="about" component={About} />
