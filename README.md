@@ -290,3 +290,14 @@ Facebook, Twitter, Google, GitHub 등의 계정에 대하여 OAuth 기능을 기
 호출된 `Meteor.methods`의 함수는 입력 데이터의 유효성 검사, 사용자 권한 검사를 수행한 후,
 데이터를 변경하고 그 결과를 리턴합니다.
 
+
+### Image upload with cloudinary.com
+
+`SHINE`에서의 이미지 업로드는 이미지 클라우드 서비스인 `cloudinary.com`의 서비스를 이용하여 구현하고 있습니다.
+
+이 서비스를 위한 이미지 처리 모듈을 `shinejs:react-cloudinary` 패키지에 담았습니다.
+
+이 서비스에 접근하기 위한 key, secret 정보는 데이터베이스에 `System`이라는 이름의 collection을 정의하고 여기에 저장합니다.
+
+이를 이용하여 쉽게 이미지 업로드 기능을 구현할 수 있습니다.
+
