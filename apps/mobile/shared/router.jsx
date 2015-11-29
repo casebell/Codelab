@@ -7,6 +7,14 @@ if (Meteor.isClient) {
   const router = (
     <Router history={createHistory()} onUpdate={App.AsideLeft.hide} >
       <Route path="/" component={App.Layout} >
+
+        <Route path="sign-in" component={Accounts.ui.SignInContainer} />
+        <Route path="sign-up" component={Accounts.ui.SignUpContainer} />
+        <Route path="forgot-password"
+               component={Accounts.ui.ForgotPasswordContainer} />
+        <Route path="reset-password/:token"
+               component={Accounts.ui.ResetPasswordContainer} />
+
         <Route path="home" component={Home} />
         <Route path="about" component={About} />
 

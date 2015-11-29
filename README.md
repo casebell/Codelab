@@ -271,3 +271,11 @@ React 컴포넌트가 화면을 그리는 HTML 코드를 생성하는 기능도 
 우리는 이 패키지를 사용하여 용도에 따라 몇 가지 wrapper를 적용하여 사용합니다.
 
 
+### accounts-ui 패키지
+Meteor에서는 회원 가입, 로그인 등의 기능을 코어에서 기본 제공합니다.
+
+`accounts-ui` 관련 패키지들은 비밀번호 기반의 `accounts-password`이외에도 각종 OAuth 서비스를 제공하는 
+Facebook, Twitter, Google, GitHub 등의 계정에 대하여 OAuth 기능을 기본으로 제공합니다.
+
+`SHINE`은 이 `accounts-ui` 패키지를 React 컴포넌트로 구현한 `shinejs:react-accounts-ui`를 구현하였습니다.
+

@@ -33,3 +33,6 @@ shinejs:react-overlays
 shinejs:react-spin
 
 momentjs:moment
+
+shinejs:react-accounts-ui
+accounts-password
