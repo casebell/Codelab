@@ -1,8 +1,8 @@
-Meteor.publish('postsList', () => {
-  return Posts.collection.find({}, { sort: { createdAt: -1 }});
+Meteor.publish('postList', () => {
+  return Post.collection.find({}, { sort: { createdAt: -1 }});
 });
 
 Meteor.publish('postView', (postId) => {
-  return Posts.collection.find({ _id: postId });
+  return Post.collection.find({ _id: postId });
 });
 

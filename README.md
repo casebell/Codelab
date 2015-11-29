@@ -222,10 +222,10 @@ Meteor Document를 보면 파일 구조에 대한 [몇 가지 패턴](http://doc
 
     
     /client
-        Posts.jsx
-        PostsContainer.jsx
+        PostList.jsx
+        PostListContainer.jsx
         PostView.jsx
-        PostContainer.jsx
+        PostViewContainer.jsx
         PostForm.jsx
         PostNewContainer.jsx
         PostEditContainer.jsx
@@ -238,5 +238,36 @@ Meteor Document를 보면 파일 구조에 대한 [몇 가지 패턴](http://doc
         post_publish.js
     
 
+### Pub/Sub
+
+`Pub/Sub`은 서버에 데이터를 요청하고 그 결과를 받는 기능을 수행합니다.  
+
+클라이언트에서 `Meteor.subscribe(name, options)` 요청을 보내면 
+서버쪽에서는 이 요청이 `Meteor.publish(name, options)` 함수로 전달됩니다. 
+ 
+서버쪽에서 이 함수를 구현하여 요청을 처리하는 결과를 리턴하면, 
+그 결과는 클라이언트의 `Minimongo`에 저장되고 서버에서 해당 Collection의 데이터에 변경이 발생할 때마다 
+그 변경 결과를 자동으로 클라이언트로 내려주어 동기화를 수행합니다.  
+
+`Publish`는 `/server/post_publish.js` 파일에 구현되어 있습니다.
+`Subscription`은 클라이언트에서 구현하는데 React의 경우에는 React 컴포넌트에서 이를 구현해야 합니다.  
+ 
+React 컴포넌트가 화면을 그리는 HTML 코드를 생성하는 기능도 하고, 위와 같이 서버와의 통신도 수행해야 하므로 
+상당히 복잡한 구조를 가지게 됩니다. 그래서 이를 분리하여 구현하는 패턴을 권장합니다.  
+
+위의 예에서 `PostList.jsx`는 화면에 그릴 템플릿만 구성하고, 
+여기에 요구되는 데이터를 서버로부터 가져오는 기능은 `PostListContainer.jsx`에 구현하는 방식입니다.  
+  
+이와 같은 방식으로 List, View 등의 화면을 구현할 수 있습니다.
+  
+### Spinner
+`Pub/Sub`을 구현하게 되면 클라이언트에서 서버에 데이터를 요청하고, 서버가 그 결과를 클라이언트로 전송하는 시간이 소요됩니다.  
+  
+이 시간동안 클라이언트의 화면이 정지해 있을 수는 없으므로 이 시간동안 현재 서버로 데이터를 요청하여 전송을 기다리는 중이라는 상태 화면을 보여주게 됩니다.
+
+이것을 Spinner 컴포넌트로 구현합니다.
+
+`shinejs:react-spinner`는 [`spin.js`](http://fgnass.github.io/spin.js/) 를 Meteor-React에서 사용할 수 있도록 구현한 패키지입니다.
+우리는 이 패키지를 사용하여 용도에 따라 몇 가지 wrapper를 적용하여 사용합니다.
 
 

@@ -80,6 +80,7 @@ session@1.1.1
 shinejs:bootstrap-less@1.2.1
 shinejs:i18n@0.9.1
 shinejs:react-overlays@0.0.1
+shinejs:react-spin@2.3.2
 shinejs:shine-theme-mobile@0.0.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7

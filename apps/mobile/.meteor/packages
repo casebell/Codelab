@@ -30,5 +30,6 @@ shinejs:shine-theme-mobile
 
 shinejs:i18n
 shinejs:react-overlays
+shinejs:react-spin
 
 momentjs:moment

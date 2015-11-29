@@ -1,7 +1,7 @@
-if (typeof Posts === 'undefined') Posts = {};
+if (typeof Post === 'undefined') Post = {};
 
 /**
- * Posts
+ * Post.collection
  *    _id           PK
  *    title         title
  *    content       content
@@ -15,4 +15,4 @@ if (typeof Posts === 'undefined') Posts = {};
  *    createdAt     date format
  *    updatedAt     date format
  */
-Posts.collection = new Mongo.Collection('posts');
+Post.collection = new Mongo.Collection('posts');

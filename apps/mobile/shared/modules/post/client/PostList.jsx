@@ -1,9 +1,10 @@
-if (typeof Posts === 'undefined') Posts = {};
 
-Posts.List = React.createClass({
+const { Link } = ReactRouter;
+
+Post.List = React.createClass({
   postList() {
     return this.props.posts.map((post) => {
-      return <PostItem key={post._id} {...post} />;
+      return <PostListItem key={post._id} {...post} />;
     });
   },
 
@@ -22,11 +23,11 @@ Posts.List = React.createClass({
   }
 });
 
-const PostItem = React.createClass({
+const PostListItem = React.createClass({
   render() {
     return (
       <div className="post-item">
-        <p>{this.props.title}</p>
+        <Link to={`/post/${this.props._id}`}>{this.props.title}</Link>
       </div>
     )
   }
